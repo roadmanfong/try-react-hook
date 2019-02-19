@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import ThemeContext from '../constants/theme';
 
 interface TodoItemProps {
   content: string,
@@ -14,10 +15,11 @@ const TodoItem = (props: TodoItemProps) => {
     onToggleComplete,
     onRemove
   } = props
+  const themeContext = useContext(ThemeContext)
   return (
     <li style={{
+      ...themeContext,
       opacity: isCompleted ? .7 : 1,
-
       display: 'inline-flex',
       flexDirection: 'row',
       width: '100%',

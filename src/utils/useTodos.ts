@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ITodo } from "./ITodo";
+import { ITodo } from "../models/ITodo";
 
 const useTodos = (initTodos: ITodo[] = []): [
   ITodo[],

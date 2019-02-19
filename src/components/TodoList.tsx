@@ -1,8 +1,8 @@
 import React from 'react'
 import TodoItem from './TodoItem';
-import useTodos from './useTodos';
+import useTodos from '../utils/useTodos';
 
-const Example = () => {
+const TodoList = () => {
 
   const [
     todos,
@@ -13,7 +13,6 @@ const Example = () => {
 
   return (
     <div>
-      <h1>Todos</h1>
       <button onClick={() => {
         const result = window.prompt('what do you want to do?')
         if (result) {
@@ -43,4 +42,4 @@ const Example = () => {
   )
 }
 
-export default Example
+export default TodoList
